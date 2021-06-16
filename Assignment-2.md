@@ -36,7 +36,7 @@ public class MainClass
 ```
 
 ### Output
-```java
+```
 Class A Constructor
 Class B Constructor
 Class C Constructor
@@ -93,7 +93,7 @@ public class classCommLine {
 ```
 
 ### Output
-```java
+```
 C:\Users\Arpit\Desktop>javac classCommLine.java
 
 C:\Users\Arpit\Desktop>java classCommLine 10 20 30 40 50 60
@@ -106,13 +106,14 @@ args[5]: 60
 ```
 
 ### Q2. Can abstract class have constructors in Java?
-
+### Ans
 ```java
 Yes, in Java, abstract classes do have constructors. They can be called by using the super() keyword.
 ```
 
 ### Q3. Create an abstract class 'Parent' with a method 'message'. It has two subclasses each having a method with the same name 'message' that prints "This is first subclass" and "This is second subclass" respectively. Call the methods 'message' by creating an object for each subclass.
 
+### Code
 ```java
 abstract class Parent{
     abstract void message();
@@ -148,6 +149,7 @@ This is second subclass
 ```
 
 ### Q4. An abstract class has a construtor which prints "This is constructor of abstract class", an abstract method named 'a_method' and a non-abstract method which prints "This is a normal method of abstract class". A class 'SubClass' inherits the abstract class and has a method named 'a_method' which prints "This is abstract method". Now create an object of 'SubClass' and call the abstract method and the non-abstract method. (Analyse the result)
+### Code
 ```java
 abstract class Abstract
 {
@@ -176,17 +178,40 @@ public class program2 {
 }
 ```
 
+### Output:
 ```java
-Output:
 This is constructor of abstract class
 This is abstract method
 This is a normal method of abstract class
 ```
 
 ### Q5. Write a java code to find whether a number is prime or not where number is accepted from command line.
-
+### Code 
 ```java
 
+public class Prime{
+    public static void main(String[] args) {
+        int num = Integer.parseInt(args[0]);
+        
+        boolean prime = true;
+        for (int i = 2; i < num; i++){
+            if ((num%i) == 0){
+                prime = false;
+            }
+        }
+        if(prime == false){
+                System.out.println(num + " is not a prime number!");
+        }
+        else{
+            System.out.println(num + " is a prime number!");
+        }
+    }
+}
+
+```
+### Output
+
+```
 C:\Users\Arpit\Desktop>javac Prime.java
 
 C:\Users\Arpit\Desktop>java Prime 13
@@ -194,5 +219,4 @@ C:\Users\Arpit\Desktop>java Prime 13
 
 C:\Users\Arpit\Desktop>java Prime 10
 10 is not a prime number!
-
 ```
