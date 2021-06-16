@@ -35,7 +35,7 @@ public class MainClass
 }
 ```
 
-### Answer
+### Output
 ```java
 Class A Constructor
 Class B Constructor
@@ -75,11 +75,124 @@ public class MainClass
 }
 ```
 
-### Answer
+### Output
 ```java
 Class A
 Class B
 Class C
 ```
 
+### c)
+```java
+public class classCommLine {
+    public static void main(String args[]) {
+        for(int i=0; i<args.length; i++)
+            System.out.println("args[" + i + "]: " + args[i]);
+    }
+}
+```
 
+### Output
+```java
+C:\Users\Arpit\Desktop>javac classCommLine.java
+
+C:\Users\Arpit\Desktop>java classCommLine 10 20 30 40 50 60
+args[0]: 10
+args[1]: 20
+args[2]: 30
+args[3]: 40
+args[4]: 50
+args[5]: 60
+```
+
+### Q2. Can abstract class have constructors in Java?
+
+```java
+Yes, in Java, abstract classes do have constructors. They can be called by using the super() keyword.
+```
+
+### Q3. Create an abstract class 'Parent' with a method 'message'. It has two subclasses each having a method with the same name 'message' that prints "This is first subclass" and "This is second subclass" respectively. Call the methods 'message' by creating an object for each subclass.
+
+```java
+abstract class Parent{
+    abstract void message();
+
+}
+
+class SubClassOne extends Parent{
+    void message(){
+        System.out.println("This is first subclass");
+    }
+}
+
+class SubClassTwo{
+    void message(){
+        System.out.println("This is second subclass");
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        SubClassOne one = new SubClassOne();
+        SubClassTwo  two = new SubClassTwo();
+
+        one.message();
+        two.message();
+    }
+}
+```
+### Output
+```java
+This is first subclass
+This is second subclass
+```
+
+### Q4. An abstract class has a construtor which prints "This is constructor of abstract class", an abstract method named 'a_method' and a non-abstract method which prints "This is a normal method of abstract class". A class 'SubClass' inherits the abstract class and has a method named 'a_method' which prints "This is abstract method". Now create an object of 'SubClass' and call the abstract method and the non-abstract method. (Analyse the result)
+```java
+abstract class Abstract
+{
+    public Abstract() {
+        System.out.println("This is constructor of abstract class");
+    }
+    abstract void a_method();
+    public void nonAbstractMethod()
+    {
+        System.out.println("This is a normal method of abstract class");
+    }
+}
+class Subclass extends Abstract
+{
+    @Override
+    void a_method() {
+        System.out.println("This is abstract method");
+    }
+}
+public class program2 {
+    public static void main(String[] args) {
+        Subclass sc = new Subclass();
+        sc.a_method();
+        sc.nonAbstractMethod();
+    }
+}
+```
+
+```java
+Output:
+This is constructor of abstract class
+This is abstract method
+This is a normal method of abstract class
+```
+
+### Q5. Write a java code to find whether a number is prime or not where number is accepted from command line.
+
+```java
+
+C:\Users\Arpit\Desktop>javac Prime.java
+
+C:\Users\Arpit\Desktop>java Prime 13
+13 is a prime number!
+
+C:\Users\Arpit\Desktop>java Prime 10
+10 is not a prime number!
+
+```
