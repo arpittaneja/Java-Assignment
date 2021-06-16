@@ -1,9 +1,10 @@
-Assignment-2 (Classes & Inheritance)
+#Assignment-2 (Classes & Inheritance)
 Dated - 14 June, 2021
 
-```java
 Q1. What will be the output of the below program?
 a)
+```java
+
 class A
 {
 public A()
