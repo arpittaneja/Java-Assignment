@@ -1,8 +1,8 @@
 # Assignment-2 (Classes & Inheritance)
 Dated - 14 June, 2021
 
-###Q1. What will be the output of the below program?
-###a)
+### Q1. What will be the output of the below program?
+### a)
 ```java
 
 class A
