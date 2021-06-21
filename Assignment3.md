@@ -79,28 +79,6 @@ QQQQPPPP
 PPPPQQQQ
 ```
 
-### c)
-```java
-public class classCommLine {
-    public static void main(String args[]) {
-        for(int i=0; i<args.length; i++)
-            System.out.println("args[" + i + "]: " + args[i]);
-    }
-}
-```
-
-### Output:
-```
-C:\Users\Arpit\Desktop>javac classCommLine.java
-
-C:\Users\Arpit\Desktop>java classCommLine 10 20 30 40 50 60
-args[0]: 10
-args[1]: 20
-args[2]: 30
-args[3]: 40
-args[4]: 50
-args[5]: 60
-```
 
 ### Q2. Create a class TwoDim which contains private members as x and y coordinates in package P1. Define the default constructor, a parameterized constructor and override toString() method to display the co-ordinates. Now reuse this class and in package P2 create another class ThreeDim, adding a new dimension as z as its private member. Define the constructors for the subclass and override toString() method in the subclass also. Write appropriate methods to show dynamic method dispatch. The main() function should be in a package P. (Try on machine also, if possible)Can abstract class have constructors in Java?
 ### Ans.
