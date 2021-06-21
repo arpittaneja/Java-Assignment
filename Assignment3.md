@@ -83,6 +83,7 @@ PPPPQQQQ
 ### Q2. Create a class TwoDim which contains private members as x and y coordinates in package P1. Define the default constructor, a parameterized constructor and override toString() method to display the co-ordinates. Now reuse this class and in package P2 create another class ThreeDim, adding a new dimension as z as its private member. Define the constructors for the subclass and override toString() method in the subclass also. Write appropriate methods to show dynamic method dispatch. The main() function should be in a package P. (Try on machine also, if possible)
 ### Ans.
 ```java
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //PACKAGE P1
 package P1;
 
@@ -105,9 +106,7 @@ public class TwoDim {
     }
 }
 
-
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //PACKAGE P2
 package P2;
@@ -131,9 +130,7 @@ public class ThreeDim extends TwoDim {
     }
 }
 
-
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //PACKAGE P
 package P;
@@ -161,13 +158,20 @@ public class MainClass {
         System.out.println(ob.toString());
     }
 }
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
+### Output:
+```java
+x: 5
+y: 3
+z: 9
 ```
 
 ### Q3. Define an abstract class Shape in package P1. Inherit two more classes: Rectangle in package P2 and Circle in package P3. Write a program to ask the user for the type of shape and then using the concept of dynamic method dispatch, display the area of the appropriate subclass. Also write appropriate methods to read the data. The main() function should not be in any package. (Try on machine also, if possible)
 
 ### Code:
 ```java
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //PACKAGE P1
 package P1;
 
@@ -178,8 +182,7 @@ abstract public  class Shape{
     abstract public double setArea() throws IOException;
 }
 
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //PACKAGE P2
 package P2;
@@ -210,8 +213,7 @@ public class Rectangle extends Shape{
     }
 }
 
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //PACKAGE P3
 package P3;
@@ -236,8 +238,7 @@ public class Circle extends Shape {
     }
 }
 
-
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //PACKAGE P
 package P;
@@ -281,6 +282,24 @@ public class MainClass {
         }
     }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
+### Output:
+```java
+Select a shape!
+ (1) Rectangle
+ (2) Circle
+Enter Choice: 3
+Select a shape!
+Invalid Option
+Try Again
+ (1) Rectangle
+ (2) Circle
+Enter Choice: 1
+4
+3
+Area: 12.0 sq units
+
 ```
 
 
@@ -354,7 +373,21 @@ public class MainClass {
 }
 
 ```
+### Output:
+```java
+Enter the radius of circle: 5
+The area of the circle is 78.53981633974483 sq. units
 
+Enter the dimensions of the rectangle: 
+6
+8
+The area of the rectangle is 64.0 sq. units
+
+Enter the side of the square: 9
+The area of the square is 81.0 sq. units
+
+Process finished with exit code 0
+```
 ```java
 No, a variable cannot be declared in interfaces in java.
 ```
