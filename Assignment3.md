@@ -83,6 +83,7 @@ PPPPQQQQ
 ### Q2. Create a class TwoDim which contains private members as x and y coordinates in package P1. Define the default constructor, a parameterized constructor and override toString() method to display the co-ordinates. Now reuse this class and in package P2 create another class ThreeDim, adding a new dimension as z as its private member. Define the constructors for the subclass and override toString() method in the subclass also. Write appropriate methods to show dynamic method dispatch. The main() function should be in a package P. (Try on machine also, if possible)Can abstract class have constructors in Java?
 ### Ans.
 ```java
+//PACKAGE P1
 package P1;
 
 public class TwoDim {
@@ -106,6 +107,9 @@ public class TwoDim {
 
 
 
+
+
+//PACKAGE P2
 package P2;
 
 import P1.TwoDim;
@@ -129,6 +133,9 @@ public class ThreeDim extends TwoDim {
 
 
 
+
+
+//PACKAGE P
 package P;
 
 import P1.TwoDim;
@@ -275,29 +282,82 @@ public class MainClass {
     }
 }
 ```
-### Output:
-```java
-This is first subclass
-This is second subclass
-```
+
 
 ### Q4. Define an interface shape which contains a function area(). Write the implementation of the interface for circle, rectangle and square. Also write the main() to test the interface. Can we declare variable in an Interface?
 ### Code:
 ```java
+import java.util.Scanner;
+
+interface Shape{
+    public double area();
+}
+
+class Circle implements Shape{
+    private double radius;
+    public void enterDimensions(){
+        System.out.print("Enter the radius of circle: ");
+        Scanner sc = new Scanner(System.in);
+        this.radius = sc.nextDouble();
+    }
+
+    public double area(){
+        return Math.PI*this.radius*this.radius;
+    }
+}
+
+class Rectangle implements Shape{
+    private double length;
+    private double breadth;
+    public void enterDimensions(){
+        System.out.print("Enter the dimensions of the rectangle: ");
+        Scanner sc0 = new Scanner(System.in);
+        this.length = sc0.nextDouble();
+
+        Scanner sc1 = new Scanner(System.in);
+        this.breadth = sc1.nextDouble();
+
+    }
+
+    public double area(){
+        return this.breadth*this.breadth;
+    }
+}
+
+class Square implements Shape{
+    private double side;
+    public void enterDimensions(){
+        System.out.print("Enter the side of the square: ");
+        Scanner sc = new Scanner(System.in);
+        this.side = sc.nextDouble();
+    }
+
+    public double area(){
+        return this.side*this.side;
+    }
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        Circle myCircle = new Circle();
+        myCircle.enterDimensions();
+        System.out.println("The area of the circle is " + myCircle.area() + " sq. units");
+
+        Rectangle myRect = new Rectangle();
+        myRect.enterDimensions();
+        System.out.println("The area of the rectangle is " + myRect.area() + " sq. units");
+
+        Square mySquare = new Square();
+        mySquare.enterDimensions();
+        System.out.println("The area of the square is " + mySquare.area() + " sq. units");
+    }
+}
 
 ```
 
-### Output:
-```java
-This is constructor of abstract class
-This is abstract method
-This is a normal method of abstract class
-```
 
 ### Q5.Can interfaces have constructors?
 ### Ans.
 ```java
 No, interfaces cannot have constructors in java.
-```
-
 ```
