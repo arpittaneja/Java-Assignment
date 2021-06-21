@@ -83,7 +83,6 @@ PPPPQQQQ
 ### Q2. Create a class TwoDim which contains private members as x and y coordinates in package P1. Define the default constructor, a parameterized constructor and override toString() method to display the co-ordinates. Now reuse this class and in package P2 create another class ThreeDim, adding a new dimension as z as its private member. Define the constructors for the subclass and override toString() method in the subclass also. Write appropriate methods to show dynamic method dispatch. The main() function should be in a package P. (Try on machine also, if possible)
 ### Ans.
 ```java
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //PACKAGE P1
 package P1;
 
@@ -158,7 +157,7 @@ public class MainClass {
         System.out.println(ob.toString());
     }
 }
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ```
 ### Output:
 ```java
@@ -171,7 +170,7 @@ z: 9
 
 ### Code:
 ```java
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 //PACKAGE P1
 package P1;
 
@@ -282,7 +281,7 @@ public class MainClass {
         }
     }
 }
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ```
 ### Output:
 ```java
