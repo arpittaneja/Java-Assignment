@@ -2,12 +2,12 @@
 Dated - 14 June, 2021
 
 #### Q1. Write a program in Java (using try-with-resources functionality) to do the following:
-####i) open two files "exam1.txt" and "exam2.txt". Accept file names through command-line arguments.
+#### i) open two files "exam1.txt" and "exam2.txt". Accept file names through command-line arguments.
 #### ii) exit the program if any of the two files is unable to open.
 #### iii) append contents of "exam1.txt" to "exam2.txt".
 #### iv) re-write contents of "exam2.txt" after removing all white spaces from the updated content (without using built-in methods).
-### i)
 
+#### Code:
 ```java
 import java.io.*;
 
@@ -93,7 +93,8 @@ class AppendFiles
 #### iii) define a custom exception class InvalidEmailIdException having a toString()method that prints appropriate exception details. The exception object is thrown when an emailid of a person is invalid.
 #### iv) define a custom exception class ExcessMembersException having a toString()method that prints appropriate exception details. The exception object is thrown when the variable count (count of instances of class Person) is greater than 5.
 #### v) define a class Demo having main method with appropriate code to show working of the above classes.
-### Ans.
+
+#### Code:
 ```java
 import java.util.Scanner;
 import java.util.regex.Matcher;
