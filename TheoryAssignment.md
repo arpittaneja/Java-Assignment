@@ -1,5 +1,6 @@
-# Assignment-2 (Classes & Inheritance)
-Dated - 14 June, 2021
+# Theory Assignment
+
+
 
 #### Q1. Write a program in Java (using try-with-resources functionality) to do the following:
 #### i) open two files "exam1.txt" and "exam2.txt". Accept file names through command-line arguments.
