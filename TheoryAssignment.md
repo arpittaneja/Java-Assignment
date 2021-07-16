@@ -83,6 +83,10 @@ class AppendFiles
 }
 ```
 
+#### Output:
+![Screenshot_20210716-212353__01](https://user-images.githubusercontent.com/75125324/125976067-a89d8f73-20b4-4140-93ec-6bb0a4ed239e.jpg)
+
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -221,3 +225,6 @@ public class Demo
 	}
 }
 ```
+
+#### Output:
+![image](https://user-images.githubusercontent.com/75125324/125974522-f1bbfc76-25d9-4661-8fbe-77b8b743b961.png)
